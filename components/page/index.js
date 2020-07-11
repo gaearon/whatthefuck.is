@@ -17,7 +17,7 @@ const Page = ({
     <div className={styles.wrapper}>
       <SEO
         title={`${
-          (title ? `WTF is ${title}?` : 'WTF is ...?') +
+          (title ? `What the fuck is ${title}?` : 'What the fuck is ...?') +
           ' ・ Dan’s JavaScript Glossary'
         }`}
         description={description}

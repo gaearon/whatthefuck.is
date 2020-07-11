@@ -5552,11 +5552,6 @@ react-refresh@0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
-react-use-konami@^1.0.13:
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/react-use-konami/-/react-use-konami-1.0.13.tgz#8d77f0bea95fca049e042cdf62dcdf02fae1d793"
-  integrity sha512-9FLw3157RbZN6uJG6H7dVTJjCeQwlh+QuJxT1yIdKKICfNvin5a0awIA5oiOdiFOvyDZClePl8xGXLs6xI/cYQ==
-
 react@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
