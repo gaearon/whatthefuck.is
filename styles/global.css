@@ -35,16 +35,16 @@
   --lighter-gray: #222;
   --lightest-gray: #1a1a1a;
   --article-color: #eaeaea;
-  --header-bg: rgba(19, 20, 21, 0.45);
+  --header-bg: rgb(19, 20, 21);
   --gray-alpha: rgba(255, 255, 255, 0.5);
   --selection: rgba(255, 255, 255, 0.99);
   --accent: #ffe77a;
   --lighter-accent: #fff3bd;
 
   /* Syntax Highlighting */
-  --token: #999;
-  --comment: #999;
-  --keyword: #fff;
+  --token: var(--lighter-accent);
+  --comment: #ccc;
+  --keyword: var(--accent);
   --name: #fff;
   --highlight: #2e2e2e;
 }
@@ -57,16 +57,16 @@
   --lighter-gray: #f5f5f5;
   --lightest-gray: #fafafa;
   --article-color: #222;
-  --header-bg: rgba(255, 255, 255, 0.8);
+  --header-bg: rgb(255, 255, 255);
   --gray-alpha: rgba(19, 20, 21, 0.5);
   --selection: rgba(0, 0, 0, 0.99);
   --accent: #0493d3;
   --lighter-accent: #1274a0;
 
-  --token: #666;
-  --comment: #999;
-  --keyword: #222;
-  --name: #444;
+  --token: var(--lighter-accent);
+  --comment: #404040;
+  --keyword: var(--accent);
+  --name: #353535;
   --highlight: #eaeaea;
 }
 

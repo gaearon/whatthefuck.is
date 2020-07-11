@@ -90,20 +90,6 @@ input[type='checkbox']:focus {
   min-height: 1.4rem;
 }
 
-article *:not(pre) > code {
-  font-weight: 600;
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  padding: 0 3px;
-}
-
-article *:not(pre) > code::before,
-article *:not(pre) > code::after {
-  content: '\`';
-  color: var(--gray);
-  user-select: none;
-}
-
 article pre {
   overflow-x: auto;
   background: var(--lightest-gray);

@@ -42,7 +42,6 @@
   padding: var(--gap) 0;
   top: 0;
   background-color: var(--header-bg);
-  backdrop-filter: saturate(180%) blur(20px);
 }
 
 .header {
@@ -76,5 +75,6 @@
 @media (max-width: 960px) {
   .nav {
     margin: var(--gap-double) 0;
+    padding: var(--gap-double) 0;
   }
 }
