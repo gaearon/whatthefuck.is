@@ -1,0 +1,24 @@
+.navigation {
+  margin: var(--big-gap) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.previous, .next {
+  font-weight: 500;
+}
+
+.next {
+  text-align: right;
+}
+
+.title {
+  font-weight: normal;
+  margin-bottom: var(--gap-half);
+}
+
+.previous:hover, .next:hover,
+.previous:focus, .next:focus {
+  color: var(--fg);
+}

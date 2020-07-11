@@ -1,0 +1,14 @@
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-gray);
+}
+
+.section > span {
+  font-size: 16rem;
+  margin: 0;
+  line-height: normal;
+  font-weight: bold;
+}

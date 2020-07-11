@@ -1,0 +1,46 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "prettier --write '**/*.js'",
+    "dev": "next-remote-watch posts",
+    "build": "yarn rss && next build",
+    "rss": "node lib/rss"
+  },
+  "pre-commit": "lint",
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "intersection-observer": "^0.7.0",
+    "lodash.debounce": "^4.0.8",
+    "next": "^9.4.2",
+    "nprogress": "^0.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "swr": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.10",
+    "@types/node": "^14.0.22",
+    "@types/react": "^16.9.23",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "babel-eslint": "^10.0.2",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "gray-matter": "^4.0.2",
+    "marked": "^1.1.0",
+    "next-remote-watch": "^0.1.1",
+    "prettier": "^1.18.2",
+    "prism-react-renderer": "^1.1.1",
+    "rss": "^1.2.2",
+    "typescript": "^3.8.3"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}

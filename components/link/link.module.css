@@ -1,0 +1,28 @@
+.reset {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.gray {
+  color: var(--gray);
+}
+
+.gray:hover, .gray:focus {
+  color: var(--fg);
+}
+
+.underline {
+  composes: reset;
+
+  background-image: linear-gradient(to right, var(--gray), var(--gray));
+  background-size: 100% 1px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  text-shadow: 0.1em 0 var(--bg), -0.1em 0 var(--bg), 0.05em 0 var(--bg),
+    -0.05em 0 var(--bg);
+}
+
+.underline:hover, .underline:focus {
+  color: var(--gray);
+}

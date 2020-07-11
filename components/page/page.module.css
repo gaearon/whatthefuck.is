@@ -1,0 +1,10 @@
+.wrapper {
+  height: 100%;
+  padding-bottom: var(--small-gap);
+}
+
+.main {
+  max-width: var(--main-content);
+  margin: 0 auto;
+  padding: 0 var(--gap);
+}

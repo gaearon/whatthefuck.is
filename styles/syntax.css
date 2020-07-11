@@ -1,0 +1,24 @@
+.keyword {
+  font-weight: bold;
+  color: var(--keyword);
+}
+
+.token.operator,
+.token.punctuation,
+.token.string,
+.token.number,
+.token.builtin,
+.token.variable {
+  color: var(--token);
+}
+
+.token.comment {
+  color: var(--comment);
+}
+
+.token.class-name,
+.token.function,
+.token.tag,
+.token.attr-name {
+  color: var(--name);
+}

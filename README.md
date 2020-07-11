@@ -1,0 +1,3 @@
+# whatthefuck.is
+
+test
