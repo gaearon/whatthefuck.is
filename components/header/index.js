@@ -6,10 +6,12 @@ import useTheme from '@lib/theme'
 import Moon from '@components/icons/moon'
 import Sun from '@components/icons/sun'
 import useMounted from '@lib/use-mounted'
+import useSwearwords from '@lib/use-swearwords'
 
 const Header = ({ slug, title }) => {
   const isMounted = useMounted()
   const { theme, toggleTheme } = useTheme()
+  const canSwear = useSwearwords()
 
   return (
     <nav className={styles.nav}>
@@ -20,7 +22,7 @@ const Header = ({ slug, title }) => {
               aria-label="Navigate Home"
               className={slug ? styles.home : styles.slug}
             >
-              whatthefuck.is
+              {canSwear ? 'whatthefuck.is' : 'whatthef~ck.is'}
             </a>
           </Link>
           <span className={styles.tagline}>

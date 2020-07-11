@@ -1,5 +1,5 @@
 ---
-name: What the fuck is _____?
+name: WTF is _____?
 about: Request a definition
 title: ''
 labels: ''
