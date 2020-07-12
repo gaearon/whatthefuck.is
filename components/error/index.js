@@ -15,6 +15,7 @@ const Error = ({ status }) => {
         <>
           <h1>404</h1>
           <p>Someone fucked up.</p>
+          <Link underline href="/">Go Home</Link>
         </>
       ) : (
         <section className={styles.section}>
