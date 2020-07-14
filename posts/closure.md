@@ -243,7 +243,7 @@ Finally, you might be wondering why closures are called that way. The reason is 
 
 Not all languages implement closures. For example, in some languages like C, it is not allowed to nest functions at all. As a result, a function may only access its own local variables or global variables, but there is never a situation in which it can access a parent function’s local variables. Naturally, that limitation is painful.
 
-There are also languages like Rust which implement closures, but have a separate syntax for them than for the regular functions. So if you want to read a variable from outside a function, you would have to opt into that in Rust. This is because under the hood, closures may require the engine to keep the outer variables (called “the environment”) around even after the function call. This overhead is acceptable in JavaScript, but it can be a performance concern for the very low-level languages.
+There are also languages like Rust which implement closures, but have a separate syntax for closures and regular functions. So if you want to read a variable from outside a function, you would have to opt into that in Rust. This is because under the hood, closures may require the engine to keep the outer variables (called “the environment”) around even after the function call. This overhead is acceptable in JavaScript, but it can be a performance concern for the very low-level languages.
 
 And with that, I hope you can get a closure on the concept of closures!
 
