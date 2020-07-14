@@ -26,7 +26,7 @@ const Page = ({
 
       {showSlug && <Header slug={showSlug && slug} title={showSlug && title} />}
       <main className={styles.main}>{children}</main>
-      <Footer />
+      <Footer slug={slug} />
     </div>
   )
 }
