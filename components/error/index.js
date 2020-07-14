@@ -4,7 +4,7 @@ import Page from '@components/page'
 import Link from '@components/link'
 import styles from './error.module.css'
 
-const Error = ({ status, params }) => {
+const Error = ({ status }) => {
   return (
     <Page title={status || 'Error'} showSlug={false}>
       <Head>
