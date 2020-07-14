@@ -233,7 +233,7 @@ liveADay();
 
 Here, `food` is a local variable inside the `liveADay()` function call. It’s tempting to think it “disappears” after we exit `liveADay`, and it won’t come back to haunt us.
 
-However, inside of `leaveADay` we tell the browser to call `eat` in five seconds. And `eat` reads the `food` variable. **So the JavaScript engine needs to keep the `food` variable from that particular `liveADay()` call available until `eat` has been called.**
+However, inside of `liveADay` we tell the browser to call `eat` in five seconds. And `eat` reads the `food` variable. **So the JavaScript engine needs to keep the `food` variable from that particular `liveADay()` call available until `eat` has been called.**
 
 In that sense, we can think of closures as of “ghosts” or “memories” of the past function calls. Even though our `liveADay()` function call has long finished, its variables must continue to exist for as long as the nested `eat` function may still be called. Luckily, JavaScript does that for us, so we don’t need to think about it.
 
