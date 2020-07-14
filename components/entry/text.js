@@ -5,8 +5,9 @@ import Link from '@components/link'
 import styles from './text.module.css'
 
 const categories = {
-  'computer science': '🔭',
-  tools: '🪓'
+  'computer science': '🎓',
+  'language': '🔭',
+  'tools': '🍭',
 }
 
 const request = ['🙋🏻', '🙋🏼', '🙋🏽', '🙋🏾', '🙋🏿']
@@ -26,7 +27,7 @@ const TextEntry = ({ title, type, comment, href, category, as }) => {
         className={styles.link}
       >
         {emoji && (
-          <span role="img" aria-label={category} className={styles.category}>
+          <span role="img" aria-label={category} title={category} className={styles.category}>
             {emoji}
           </span>
         )}
