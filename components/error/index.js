@@ -1,13 +1,10 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 
 import Page from '@components/page'
 import Link from '@components/link'
 import styles from './error.module.css'
 
 const Error = ({ status, params }) => {
-  const router = useRouter()
-
   return (
     <Page title={status || 'Error'} showSlug={false}>
       <Head>
