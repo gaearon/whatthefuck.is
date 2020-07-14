@@ -161,7 +161,7 @@ liveADay();
 
 Read both snippets one more time and make sure that they are equivalent.
 
-This code works! But it is curious. Notice the `eat` function is *inside* the `liveADay` function. Is that even allowed? Can we really put a function inside another function?
+This code works! But look closer. Notice the `eat` function is *inside* the `liveADay` function. Is that even allowed? Can we really put a function inside another function?
 
 There are languages in which a code structured this way is *not* valid. For example, this code is not valid in the C language (which doesn’t have closures). This means that in C, our second conclusion isn’t true — we can’t just take some arbitrary piece of code and wrap it in a function. But JavaScript doesn’t suffer from that limitation.
 
