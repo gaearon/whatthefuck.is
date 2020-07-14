@@ -1,10 +1,13 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 import Page from '@components/page'
 import Link from '@components/link'
 import styles from './error.module.css'
 
-const Error = ({ status }) => {
+const Error = ({ status, params }) => {
+  const router = useRouter()
+
   return (
     <Page title={status || 'Error'} showSlug={false}>
       <Head>
@@ -14,8 +17,20 @@ const Error = ({ status }) => {
       {status === 404 ? (
         <>
           <h1>404</h1>
-          <p>Someone fucked up.</p>
-          <Link underline href="/">Go Home</Link>
+          <p>
+            The term you are looking for doesn't exist. You can{' '}
+            <Link
+              underline
+              href="https://github.com/gaearon/whatthefuck.is/issues/new?assignees=&labels=&template=what-the-fuck-is-_____-.md&title="
+            >
+              suggest this term
+            </Link>
+            .
+          </p>
+
+          <Link underline href="/">
+            Go Home
+          </Link>
         </>
       ) : (
         <section className={styles.section}>
