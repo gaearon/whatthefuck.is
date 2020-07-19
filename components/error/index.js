@@ -18,7 +18,7 @@ const Error = ({ missingTerm, status }) => {
             The term <strong>{missingTerm}</strong> doesn’t exist yet. You can{' '}
             <Link
               underline
-              href={ `https://github.com/gaearon/whatthefuck.is/issues/new?assignees=&labels=&template=what-the-fuck-is-_____-.md&title=WTF is ${missingTerm}?` }
+              href={ `https://github.com/gaearon/whatthefuck.is/issues/new?template=what-the-fuck-is-_____-.md&title=WTF is ${missingTerm}?` }
             >
               suggest this term
             </Link>
