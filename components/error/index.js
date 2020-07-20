@@ -4,7 +4,7 @@ import Page from '@components/page'
 import Link from '@components/link'
 import styles from './error.module.css'
 
-const Error = ({ status }) => {
+const Error = ({ missingTerm, status }) => {
   return (
     <Page title={status || 'Error'} showSlug={false}>
       <Head>
@@ -15,10 +15,10 @@ const Error = ({ status }) => {
         <>
           <h1>404</h1>
           <p>
-            The term you are looking for doesn't exist. You can{' '}
+            The term <strong>{missingTerm}</strong> doesn’t exist yet. You can{' '}
             <Link
               underline
-              href="https://github.com/gaearon/whatthefuck.is/issues/new?assignees=&labels=&template=what-the-fuck-is-_____-.md&title="
+              href={ `https://github.com/gaearon/whatthefuck.is/issues/new?template=what-the-fuck-is-_____-.md&title=WTF is ${missingTerm}?` }
             >
               suggest this term
             </Link>
