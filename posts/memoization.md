@@ -32,9 +32,9 @@ showWeatherReport(); // (!) Triggers the calculation
 showWeatherReport(); // (!) Triggers the calculation
 ```
 
-This is not ideal. In the real life, if you already knew the answer, you wouldn’t be calculating it over and over! You would reuse the result of your previous calculation. That’s what memoization is. **Memoization is storing the result of some calculation so you can use it next time instead of calculating the same thing again and again.**
+This is not ideal. In the real life, if you already knew the answer, you wouldn’t be calculating it over and over! You would reuse the result from your previous calculation. That’s what memoization is. **Memoization is storing the result of some calculation so you can use it next time instead of calculating the same thing again and again.**
 
-In the below example, we call `memoizedGetChanceOfRain()` instead. This is a new function that we added which will check if we already have an answer — and if we do, it will return the previous answer instead re-running `getChanceOfRain()`:
+In the below example, we call `memoizedGetChanceOfRain()` instead. This is a new function that we added which will check if we already have an answer — and if we do, it will return the previous answer instead of re-running `getChanceOfRain()`:
 
 ```js
 import { getChanceOfRain } from 'magic-weather-calculator';
@@ -198,7 +198,7 @@ showWeatherReport('Tokyo');  // Uses the calculated result
 showWeatherReport('Paris');  // (!) Triggers the calculation
 ```
 
-However, this solution isn’t without the downsides too. **In particular, if we keep passing more different `city` values to our function, our `Map` will keep growing.**
+However, this solution isn’t without its downsides too. **In particular, if we keep passing more different `city` values to our function, our `Map` will keep growing.**
 
 So this solution trades faster performance for potentially unbounded memory growth. In the very worst cases, this can result in our browser tab crashing, especially if every result uses a significant part of memory (e.g. a DOM tree).
 
@@ -297,7 +297,7 @@ function memoize() {
 }
 ```
 
-We want to make this function useful for more than calculating the chance of rain. So instead of `getChanceOfRain`, we’ll add a function parameter that we’ll call `fn`:
+We want to make this function more useful than just calculating the chance of rain. So instead of `getChanceOfRain`, we’ll add a function parameter that we’ll call `fn`:
 
 ```js
 function memoize(fn) { // Declare the fn parameter
@@ -369,7 +369,7 @@ A reusable `memoize` function like this exists in [Lodash](https://lodash.com/do
 
 ### Recap
 
-Now let’s quickly recap what we learned. Memoization (without “r”) is a way to make your program faster. It works when there is a section of code executes many times, but that code only performs a calculation (in other words, it is “pure”) — so it is safe to reuse the previous result. There are different approaches to memoization: you can memoize only the last result, the last N results, or even all previous results. You should use your judgement to choose the approach that makes sense in each specific case. Generally saying, it is not hard to implement memoization manually, but there are also packages that do that for you. Here is how Lodash [implements it](https://github.com/lodash/lodash/blob/master/memoize.js).
+Now let’s quickly recap what we learned. Memoization (without “r”) is a way to make your program faster. It works when there is a section of code that executes many times, but that code only performs a calculation (in other words, it is “pure”) — so it is safe to reuse the previous result. There are different approaches to memoization: you can memoize only the last result, the last N results, or even all previous results. You should use your judgement to choose the approach that makes sense in each specific case. Generally saying, it is not hard to implement memoization manually, but there are also packages that do that for you. Here is how Lodash [implements it](https://github.com/lodash/lodash/blob/master/memoize.js).
 
 But at its core, memoization is about taking code like this:
 
