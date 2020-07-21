@@ -72,7 +72,7 @@ showWeatherReport(); // Uses the calculated result
 showWeatherReport(); // Uses the calculated result
 ```
 
-That’s what memoization is. When we say a function is “memoized”, it doesn’t mean we do something special to it from the JavaScript language perspective. It only means that we avoid calling it unnecessarily if we know its result wouldn’t change.
+That’s what memoization is. When we say a function is “memoized”, it doesn’t mean we do something special to it from the JavaScript language perspective. It only means that we avoid calling it unnecessarily if we know its result won’t change.
 
 ---
 
@@ -84,7 +84,7 @@ That’s what memoization is. When we say a function is “memoized”, it doesn
 
 Generally, memoization always follows the same scheme:
 
-1. Check if we already have an result.
+1. Check if we already have a result.
 2. If yes, return it.
 3. If no, calculate the result and store it for the next time.
 
@@ -97,7 +97,7 @@ function showWeatherReport(city) {
 }
 ```
 
-If we naïvely memoize this function like we did before, we would introduce a bug:
+If we naïvely memoized this function like we did before, we would introduce a bug:
 
 ```js
 showWeatherReport('Tokyo');  // (!) Triggers the calculation
@@ -228,7 +228,7 @@ function showWeatherReport() {
 }
 ```
 
-If we call `showWeatherReport()` two times, we will see two input boxes. We could input different cities, and see different results in the console. But if memoized the `getChanceOfRain` function, we would only see one input box! Each next call would keep returning the same result and wouldn’t let us enter a different city in the box.
+If we call `showWeatherReport()` two times, we will see two input boxes. We could input different cities, and see different results in the console. But if we memoized the `getChanceOfRain` function, we would only see one input box! Each next call would keep returning the same result and wouldn’t let us enter a different city in the box.
 
 So memoization is only safe to do when the function is “pure” — that is, **if it only reads its parameters and doesn’t interact with the “outside world”.** With a pure function, it doesn’t matter whether you call it once or if you reuse its previous result.
 
@@ -253,7 +253,7 @@ function showWeatherReport() {
 }
 ```
 
-Now it would be safe to memoize `getChanceOfRain` — because it takes `city` as a parameter rather than showing the input box to the user. In other words, it is pure. Concretely, it would mean that you would still see an input box on every call to `showWeatherReport`, but the calculation would be skipped if we have the result.
+Now it would be safe to memoize `getChanceOfRain` — because it takes `city` as a parameter rather than showing the input box to the user. In other words, it is pure. Concretely, it would mean that you would still see an input box on every call to `showWeatherReport`, but the calculation would be skipped if we had the result.
 
 ### Reusable Memoization
 
