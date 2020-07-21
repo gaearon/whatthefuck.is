@@ -1,7 +1,7 @@
 ---
 title: dynamic dispatch
 slug: dynamic-dispatch
-date: July 11, 2020
+date: July 20, 2020
 category: computer science
 ---
 
