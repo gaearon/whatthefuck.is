@@ -32,7 +32,7 @@ showWeatherReport(); // (!) Triggers the calculation
 showWeatherReport(); // (!) Triggers the calculation
 ```
 
-This is not ideal. In the real life, if you already knew the answer, you wouldn’t be calculating it over and over! You would reuse the result from your previous calculation. That’s what memoization is. **Memoization is storing the result of some calculation so you can use it next time instead of calculating the same thing again and again.**
+This is not ideal. In the real life, if you already knew the answer, you wouldn’t be calculating it over and over! You would reuse the result from your previous calculation. That’s what memoization is. **Memoization means storing the result so you can use it next time instead of calculating the same thing again and again.**
 
 In the below example, we call `memoizedGetChanceOfRain()` instead. This is a new function that we added which will check if we already have an answer — and if we do, it will return the previous answer instead of re-running `getChanceOfRain()`:
 
