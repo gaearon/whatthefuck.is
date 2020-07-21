@@ -171,7 +171,7 @@ let resultsPerCity = new Map();
 function memoizedGetChanceOfRain(city) {
   if (resultsPerCity.has(city)) {
     // We already have a result for this city.
-    return lastResult;
+    return resultsPerCity.get(city);
   }
   // We're called for the first time for this city.
   let result = getChanceOfRain(city);
