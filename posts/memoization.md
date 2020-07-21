@@ -228,7 +228,7 @@ function showWeatherReport() {
 }
 ```
 
-If we call `showWeatherReport()` two times, we will see two input boxes. We could input different cities, and see different results in the console. But if we memoized the `getChanceOfRain` function, we would only see one input box! Each next call would keep returning the same result and wouldn’t let us enter a different city in the box.
+If we call `showWeatherReport()` two times, we will see two input boxes. We could input different cities, and see different results in the console. But if we memoized the `getChanceOfRain` function, we would only see one input box! Each next call would keep returning the same result and wouldn’t let us enter a different city.
 
 So memoization is only safe to do when the function is “pure” — that is, **if it only reads its parameters and doesn’t interact with the “outside world”.** With a pure function, it doesn’t matter whether you call it once or if you reuse its previous result.
 
