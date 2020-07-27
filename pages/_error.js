@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Error from '@components/error'
+import Error from '@/components/error'
 
 class E extends React.Component {
   static getInitialProps({ res, err }) {

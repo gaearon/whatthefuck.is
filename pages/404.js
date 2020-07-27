@@ -1,6 +1,6 @@
 import { withRouter } from 'next/router'
 
-import Error from '@components/error'
+import Error from '@/components/error'
 
 // Included just to prevent Automatic Static Optimization
 export async function getStaticProps(context) {
@@ -10,9 +10,11 @@ export async function getStaticProps(context) {
 }
 
 // Strips potential `/term?something=else` into `term`
-const extractTerm = path => path.substring(
-  path.indexOf('/') + 1, Math.max(path.indexOf('?'), path.length)
-)
+const extractTerm = path =>
+  path.substring(
+    path.indexOf('/') + 1,
+    Math.max(path.indexOf('?'), path.length)
+  )
 
 function E({ router }) {
   return <Error missingTerm={extractTerm(router.asPath)} status={404} />

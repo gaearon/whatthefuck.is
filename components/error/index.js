@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import Page from '@components/page'
-import Link from '@components/link'
+import Page from '@/components/page'
+import Link from '@/components/link'
 import styles from './error.module.css'
 
 const Error = ({ missingTerm, status }) => {
@@ -18,7 +18,7 @@ const Error = ({ missingTerm, status }) => {
             The term <strong>{missingTerm}</strong> doesn’t exist yet. You can{' '}
             <Link
               underline
-              href={ `https://github.com/gaearon/whatthefuck.is/issues/new?template=what-the-fuck-is-_____-.md&title=WTF is ${missingTerm}?` }
+              href={`https://github.com/gaearon/whatthefuck.is/issues/new?template=what-the-fuck-is-_____-.md&title=WTF is ${missingTerm}?`}
             >
               suggest this term
             </Link>

@@ -1,6 +1,6 @@
-import SEO from '@components/seo'
-import Header from '@components/header'
-import Footer from '@components/footer'
+import SEO from '@/components/seo'
+import Header from '@/components/header'
+import Footer from '@/components/footer'
 import styles from './page.module.css'
 
 const Page = ({
@@ -16,10 +16,9 @@ const Page = ({
   return (
     <div className={styles.wrapper}>
       <SEO
-        title={`${
-          (title ? `What the fuck is ${title}?` : 'What the fuck is ...?') +
-          ' ・ Dan’s JavaScript Glossary'
-        }`}
+        title={`${(title
+          ? `What the fuck is ${title}?`
+          : 'What the fuck is ...?') + ' ・ Dan’s JavaScript Glossary'}`}
         description={description}
         image={image}
       />
