@@ -1,8 +1,8 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-import { themeStorageKey } from '@lib/theme'
-import { GA_TRACKING_ID } from '@lib/gtag'
+import { themeStorageKey } from '@/lib/theme'
+import { GA_TRACKING_ID } from '@/lib/gtag'
 const bgVariableName = '--bg'
 
 class MyDocument extends Document {
@@ -45,7 +45,7 @@ class MyDocument extends Document {
             gtag('config', '${GA_TRACKING_ID}', {
               page_path: window.location.pathname,
             });
-          `,
+          `
             }}
           />
           <Main />
