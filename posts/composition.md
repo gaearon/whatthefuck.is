@@ -206,14 +206,14 @@ function Layout({ sidebar, content }) {
 }
 ```
 
-Then we can “fill in” those holes from different parent components:
+Then we can “fill in” those slots from different parent components:
 
 ```js
 function HomePage() {
   return (
     <Layout
       sidebar={<HomeSidebar />}
-      sidebar={<HomeContent />}
+      content={<HomeContent />}
     >
   )
 }
@@ -222,7 +222,7 @@ function AboutPage() {
   return (
     <Layout
       sidebar={<AboutSidebar />}
-      sidebar={<AboutContent />}
+      content={<AboutContent />}
     >
   )
 }
