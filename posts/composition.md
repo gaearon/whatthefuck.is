@@ -242,7 +242,7 @@ Sometimes, people say that inheritance “locks you into” your first design be
 
 Overall, the industry has largely moved away from modeling UI components as deep inheritance hierarchies, as was common in the 2000s.
 
-This doesn’t mean inheritance is always “bad”. But it is a very blunt tool, and it should be approached with moderation. In particular, inheritance hierarchies that are deeper a few levels often cause problems that shallow inheritance doesn’t.
+This doesn’t mean inheritance is always “bad”. But it is a very blunt tool, and it should be approached with moderation. In particular, inheritance hierarchies deeper than a few levels often cause problems that shallow inheritance doesn’t.
 
 Modern front-end codebases rarely use inheritance for their UI because all of the popular UI libraries today feature powerful built-in support for composition. Say, in React, instead of extending a `Button`, you would *render* a `<Button>` in a parent component. Even JavaScript UI libraries that embrace classes typically don’t use inheritance as a way to reuse rendering code. And this is probably for the best.
 
