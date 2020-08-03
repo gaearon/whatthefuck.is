@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
 import styles from './header.module.css'
-import LogoIcon from '@components/icons/logo'
-import useTheme from '@lib/theme'
-import Moon from '@components/icons/moon'
-import Sun from '@components/icons/sun'
-import useMounted from '@lib/use-mounted'
+import LogoIcon from '@/components/icons/logo'
+import useTheme from '@/lib/theme'
+import Moon from '@/components/icons/moon'
+import Sun from '@/components/icons/sun'
+import useMounted from '@/lib/use-mounted'
 
 const Header = ({ slug, title }) => {
   const isMounted = useMounted()
