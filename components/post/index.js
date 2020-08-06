@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Navigation from './navigation'
 import Page from '@/components/page'
 import styles from './post.module.css'
+import HaveLang from '@/components/post/have-lang'
 
 function escapeHtml(unsafe) {
   return unsafe
@@ -22,7 +23,8 @@ const Post = ({
   description,
   date,
   previous,
-  next
+  next,
+  ...props
 }) => {
   return (
     <Page
@@ -39,6 +41,8 @@ const Post = ({
         {hidden && <meta name="robots" content="noindex" />}
         {date && <meta name="date" content={date} />}
       </Head>
+
+      <HaveLang slug={slug} {...props} />
 
       <article
         dangerouslySetInnerHTML={{
