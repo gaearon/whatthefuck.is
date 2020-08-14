@@ -369,7 +369,7 @@ A reusable `memoize` function like this exists in [Lodash](https://lodash.com/do
 
 ### Recap
 
-Now let’s quickly recap what we learned. Memoization (without “r”) is a way to make your program faster. It works when there is a section of code that executes many times, but that code only performs a calculation (in other words, it is “pure”) — so it is safe to reuse the previous result. There are different approaches to memoization: you can memoize only the last result, the last N results, or even all previous results. You should use your judgement to choose the approach that makes sense in each specific case. Generally saying, it is not hard to implement memoization manually, but there are also packages that do that for you. Here is how Lodash [implements it](https://github.com/lodash/lodash/blob/master/memoize.js).
+Now let’s quickly recap what we learned. Memoization (without “r”) is a way to make your program faster. It works when there is a section of code that executes many times, but that code only performs a calculation (in other words, it is “pure”) — so it is safe to reuse the previous result. There are different approaches to memoization: you can memoize only the last result, the last N results, or even all previous results. You should use your judgement to choose the approach that makes sense in each specific case. Generally speaking, it is not hard to implement memoization manually, but there are also packages that do that for you. Here is how Lodash [implements it](https://github.com/lodash/lodash/blob/master/memoize.js).
 
 But at its core, memoization is about taking code like this:
 

@@ -15,7 +15,7 @@ In some object-oriented languages that predate JavaScript (notably, in Smalltalk
 
 Why do we say this is “dynamic dispatch”? Can it be static? This depends on the language. For example, in JavaScript, calls like `obj.method()` are always “dynamic”. But this is not universally true for other languages. Let’s unpack the difference.
 
-To understand this, we need to dive deeper into how computer code works under the hood. Generally saying, the functions we write eventually become sequences of computer instructions that are stored somewhere in memory. Calling a function means the computer will “jump” to its code in memory and execute its operations.
+To understand this, we need to dive deeper into how computer code works under the hood. Generally speaking, the functions we write eventually become sequences of computer instructions that are stored somewhere in memory. Calling a function means the computer will “jump” to its code in memory and execute its operations.
 
 When we say that a language has *static dispatch*, it means that when the computer compiles `obj.method()`, it knows exactly *which* function this code would “jump” to. It won’t need to do any extra operations to “find” the function location in memory.
 
