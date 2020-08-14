@@ -1,14 +1,14 @@
 import Post from '@/components/post'
-import getPosts from '@/lib/get-posts'
-import { langList } from '@/lib/langList'
+import getPostsMultilang from '@/lib/get-posts-multilang'
 import renderMarkdown from '@/lib/render-markdown'
+import { langList } from '@/lib/langList'
 
-const PostPage = props => {
+export default function DynamicLang (props) {
   return <Post {...props} />
 }
 
-export const getStaticProps = ({ params: { slug } }) => {
-  const posts = getPosts()
+export async function getStaticProps({ params: { slug } }) {
+  const posts = getPostsMultilang('es')
   const postIndex = posts.findIndex(p => p.slug === slug)
   const post = posts[postIndex]
   const { body, ...rest } = post
@@ -19,16 +19,15 @@ export const getStaticProps = ({ params: { slug } }) => {
       next: posts[postIndex + 1] || null,
       ...rest,
       html: renderMarkdown(body),
+      lang: 'es',
       langList
     }
   }
 }
 
-export const getStaticPaths = () => {
+export async function getStaticPaths() {
   return {
-    paths: getPosts().map(p => `/${p.slug}`),
+    paths: getPostsMultilang('es').map(p => `/${p.slug}/es`),
     fallback: false
   }
 }
-
-export default PostPage

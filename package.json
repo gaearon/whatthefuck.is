@@ -13,7 +13,7 @@
     "classnames": "^2.2.6",
     "intersection-observer": "^0.7.0",
     "lodash.debounce": "^4.0.8",
-    "next": "^9.4.2",
+    "next": "9.5.1",
     "nprogress": "^0.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
