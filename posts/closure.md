@@ -120,7 +120,7 @@ Notice how the code above is equivalent to the original code snippet:
 /* A snippet of code */
 ```
 
-In other words, **if we take some piece of code, “wrap” that code in a function, and then call that function exactly once, we haven’t changed what that code is doing**. There are some exceptions to this rule which we will ignore, but generally saying this should make sense. Sit on this idea until your brain feels comfortable with it.
+In other words, **if we take some piece of code, “wrap” that code in a function, and then call that function exactly once, we haven’t changed what that code is doing**. There are some exceptions to this rule which we will ignore, but generally speaking this should make sense. Sit on this idea until your brain feels comfortable with it.
 
 ### Step 3: Discovering Closures
 
