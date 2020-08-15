@@ -165,7 +165,7 @@ That being said, the fundamental idea of function composition is important. Esse
 
 In the trivial cases like above, using it directly brings more trouble than it’s worth. But it might get more useful if the problem is more challenging. Perhaps, we want each step to be [memoized](/memoization). Perhaps, each step happens asynchronously and the control flow is more complex. There can be cases where we want something to happen before or after each step, without repeating that fragile logic everywhere. Perhaps, the steps themselves need to be “interpreted” in different ways by our program, so we want to separate their order from how they are being executed.
 
-Function composition can inspire interesting solutions if we keep it mind. This doesn’t mean that we need to take out a `pipe` every time we want to put two functions together. We don’t need to prove to the computer that we’re smart and learned our lessons about composition. Usually, plain function calls are enough.
+Function composition can inspire interesting solutions if we keep in mind. This doesn’t mean that we need to take out a `pipe` every time we want to put two functions together. We don’t need to prove to the computer that we’re smart and learned our lessons about composition. Usually, plain function calls are enough.
 
 ### Component Composition
 
