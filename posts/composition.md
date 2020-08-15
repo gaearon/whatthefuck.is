@@ -153,7 +153,7 @@ Understanding `pipe` and function composition for the first time is a lightbulb 
 
 How “beautiful”.
 
-There is definitely a profound insight there that we shouldn’t disregard. We have *raised the level of abstraction* by making the structure of our program itself — a sequence of steps — into something our code can manipulate. For example, we could teach `pipe` to wrap every step with some logging, or to run every step asynchronously. This is a powerful technique that deserves our understanding.
+There is definitely a profound insight here that we shouldn’t disregard. We have *raised the level of abstraction* by making the structure of our program itself — a sequence of steps — into something our code can manipulate. For example, we could teach `pipe` to wrap every step with some logging, or to run every step asynchronously. This is a powerful technique that deserves our understanding.
 
 This programming style can also be a nightmare to work with. We’ve “outsourced” the actual business of function calls to helpers like `pipe`, and as a result we can no longer clearly see how each piece of data flows in and out of our functions because it all happens inside of `pipe`. We’ve added a piece of “indirection” — our code is more flexible, but less direct. Add too many layers, and [our heads will overflow](https://overreacted.io/the-wet-codebase/).
 
@@ -165,7 +165,7 @@ That being said, the fundamental idea of function composition is important. Esse
 
 In the trivial cases like above, using it directly brings more trouble than it’s worth. But it might get more useful if the problem is more challenging. Perhaps, we want each step to be [memoized](/memoization). Perhaps, each step happens asynchronously and the control flow is more complex. There can be cases where we want something to happen before or after each step, without repeating that fragile logic everywhere. Perhaps, the steps themselves need to be “interpreted” in different ways by our program, so we want to separate their order from how they are being executed.
 
-Function composition can inspire interesting solutions if we keep it mind. This doesn’t mean that we need to take out a `pipe` every time we want to put two functions together. We don’t need to prove to the computer that we’re smart and learned our lessons about composition. Usually, plain function calls are enough.
+Function composition can inspire interesting solutions if we keep it in mind. This doesn’t mean that we need to take out a `pipe` every time we want to put two functions together. We don’t need to prove to the computer that we’re smart and learned our lessons about composition. Usually, plain function calls are enough.
 
 ### Component Composition
 
@@ -191,7 +191,7 @@ function Button() {
 }
 ```
 
-This is also called “composition” because we are putting things (components) into other things (components), and they fit with each other (“compose”) pretty well.
+This is also called “composition” because we are putting things (components) into other things (components), and they fit into each other (“compose”) pretty well.
 
 One interesting variant of composition is when a component has “slots”:
 
@@ -238,7 +238,7 @@ People sometimes say “composition” when contrasting it with inheritance. Thi
 
 In particular, if you express your code as classes, it is tempting to reuse behavior from another class by extending it (inheritance). However, this makes it somewhat difficult to adjust the behavior later. For example, you may want to similarly reuse behavior from *another* class, but you can’t extend more than one base class.
 
-Sometimes, people say that inheritance “locks you into” your first design because the cost of changing the class hierarchy later is too high. When people suggest *composition* is an alternative to inheritance, they mean that instead of extending a class, you can keep an instance of that class as a field. Then you can “delegate” to that instance when necessary, but you are also free to do something different.
+Sometimes, people say that inheritance “locks you into” your first design because the cost of changing the class hierarchy later is too high. When people suggest *composition* as an alternative to inheritance, they mean that instead of extending a class, you can keep an instance of that class as a field. You can then “delegate” to that instance when necessary, but you are also free to do something different.
 
 Overall, the industry has largely moved away from modeling UI components as deep inheritance hierarchies, as was common in the 2000s.
 
@@ -248,6 +248,6 @@ Modern front-end codebases rarely use inheritance for their UI because all of th
 
 ### Recap
 
-To sum up, we say that we compose two things when we make a third thing out of them that is similarly shaped. The term has a mathematical meaning, and it is close to its meaning in functional programming. But the further we move away from pure functional programming, the less formal and more colloquial this term becomes.
+To sum up, we say that we compose two things when we make a third thing out of them that is similarly shaped. The term has a mathematical meaning, and it is close to what it means in functional programming. But the further we move away from pure functional programming, the less formal and more colloquial this term becomes.
 
 Function composition is a powerful concept, but it raises the level of abstraction and makes your code less direct. If you write your code in a style that composes functions in some way before calling them, and there are other humans on your team, make sure that you’re getting concrete benefits from this approach. It is not “cleaner” or “better”, and there is a price to pay for “beautiful” but indirect code.
