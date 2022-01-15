@@ -32,7 +32,7 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.5.0",
     "gray-matter": "^4.0.2",
-    "marked": "^1.1.0",
+    "marked": "^4.0.10",
     "next-remote-watch": "^0.1.1",
     "prettier": "^1.18.2",
     "prism-react-renderer": "^1.1.1",
